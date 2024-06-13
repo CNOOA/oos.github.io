@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>PHP加密系统</title>
+    <style>
+    @font-face {
+    font-family: 'zti';
+    src: url('https://cos.vs98k.cn/ziti/mjfont1.woff2');
+}
+
+body {
+    font-family: 'zti' !important;
+}
+
+
+body::before {
+    background: #f5f5f5;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::before {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body{
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    --theme: #007aff;
+    --background: rgba(255, 255, 255, 1);
+    --main: #303133;
+    --routine: #606266;
+    --minor: #626262;
+    --seat: #c0c4cc;
+    --classA: #dcdfe6;
+    --classB: #e4e7ed;
+    --classC: #ebeef5;
+    --classD: #f2f6fc;
+    --radius-wrap: 8px;
+    --radius-inner: 4px;
+}
+
+        body {
+           
+            margin: 20px;
+            padding: 10px;
+        }
+
+        input[type="file"],
+        select,
+        input[type="text"],
+        button {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .download-btn {
+            margin-top: 10px;
+            background-color: #008CBA;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background-color: #005f6b;
+        }
+        
+        <style type="text/css">
+.dbtopp {
+
+	font: 100 16px/16px 'microsoft yahei';
+}
+
+.dbtop {
+	font: 700 22px/25px 'microsoft yahei';
+	font-size:22px;
+    margin-right: 18px;
+	margin-top: 20px; 
+}
+.bodys{
+    border-radius: 10px;
+     width: 70%;
+     height: 50%;
+    box-shadow: inset 0 1px 4px 0 #87CEEB;
+     margin: 15% auto;
+     padding: 1em;
+     background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+h2{
+    text-align: center;
+    text-shadow: 0 0.4875rem 0.3125rem #1c1f21;
+    letter-spacing: .3rem;
+}
+</style>
+</head>
+<body style="background: url(https://pay.vs98k.cn/bzApi.php) center center / cover no-repeat fixed;">
+    <div class="bodys">
+          
+        <h2>VPN免费分享</h2>
+        <form  id="uploadForm" action="jiami.php" method="post" enctype="multipart/form-data">
+                   <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">快速自适应订阅地址<span class="p1span">推荐</span></p>
+                            <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a</p>
+                        </div>
+                    </div>
+                    <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">Base64订阅地址<span class="p1span">备用</span></p>
+                            <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?sub</p>
+							<p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?b64</p>
+						    <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?base64</p>
+                        </div>
+                    </div>
+                    <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">clash订阅地址<span class="p1span">主用</span></p>
+                            <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?clash</p>
+                        </div>
+                    </div>
+                 <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">singbox订阅地址<span class="p1span2">新版</span></p>
+                            <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?sb</p>
+						    <p class="p2">https://i.ooocf.com/bbbb8291-f3a6-4382-9806-fcb0eed3d00a?singbox</p>
+                        </div>
+                    </div>
+                                        <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">clash-meta<span class="p1span2">新版</span></p>
+                        </div>
+                        <a href="https://blog.qqdsw8.cn/" target="_blank" class="btn-down">
+                            文本下载
+                        </a>
+                    </div>
+                                        <div class="top-line nomp"></div>
+                    <div class="row">
+                        <div class="text">
+                            <p class="p1">clash-meta<span class="p1span2">新版</span></p>
+                        </div>
+                        <a href="https://blog.qqdsw8.cn/" target="_blank" class="btn-down">
+                            文本下载
+                        </a>
+                    </div>
+        
+            <label for="banquan">版权信息：</label>
+        
+    </form>
+    
+
+     <script>
+        $(document).ready(function() {
+            $("#uploadForm").on("submit", function(e) {
+                e.preventDefault();
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: "jiami.php",
+                    type: "POST",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        // Trigger the download using a hidden iframe
+                        downloadFile(response);
+                        alert("文件上传、加密和下载成功。");
+                    }
+                });
+            });
+
+            function downloadFile(filePath) {
+                var iframe = document.createElement("iframe");
+                iframe.style.display = "none";
+                iframe.src = filePath;
+                document.body.appendChild(iframe);
+
+                // Remove the iframe after download is initiated
+                setTimeout(function() {
+                    document.body.removeChild(iframe);
+                }, 1000);
+            }
+           /* function downloadFile(filePath) {
+                window.location.href = filePath; // 直接通过浏览器导航到文件下载路径
+            }*/
+            
+            
+            
+        });
+    </script>
+    <script type="text/javascript">
+window.addEventListener("load", function () {
+	const keyCodeMap = {
+		91: true, // command
+		61: true,
+		107: true, // 数字键盘 +
+		109: true, // 数字键盘 -
+		173: true, // 火狐 - 号
+		187: true, // +
+		189: true, // -
+	};
+	// 覆盖ctrl||command + ‘+’/‘-’
+	document.onkeydown = function (event) {
+		const e = event || window.event;
+		const ctrlKey = e.ctrlKey || e.metaKey;
+		if (ctrlKey && keyCodeMap[e.keyCode]) {
+			e.preventDefault();
+		} else if (e.detail) {
+			// Firefox
+			event.returnValue = false;
+		}
+	};
+	// 覆盖鼠标滑动
+	document.body.addEventListener(
+		"wheel",
+		(e) => {
+			if (e.ctrlKey) {
+				if (e.deltaY < 0) {
+					e.preventDefault();
+					return false;
+				}
+				if (e.deltaY > 0) {
+					e.preventDefault();
+					return false;
+				}
+			}
+		},
+		{ passive: false }
+	);
+});
+
+</script>
+</body>
+</html>
